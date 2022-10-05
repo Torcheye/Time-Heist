@@ -121,7 +121,7 @@ public class Player : TimeActor
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
-        var movement = y * transform.up + x * transform.right;
+        var movement = y * Vector3.up + x * Vector3.right;
 
         _isMoving = movement.magnitude > 0.1f;
         _animator.SetBool("Walking", _isMoving);
